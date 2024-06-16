@@ -1,6 +1,6 @@
 # iot-workshop-arms
 
-Códigos para el desarrollo y mantenimiento del [Taller IoT](https://ieeeitba.org.ar/iot).
+Códigos para el desarrollo y mantenimiento de los brazos robóticos del [Taller IoT](https://ieeeitba.org.ar/iot).
 
 ----------
 
