@@ -101,6 +101,20 @@ void setup()
     digitalWrite(LED_RED, HIGH);
     cycle_color(CRGB::Red);
 
+    // while (1)
+    // {
+    //     for (int j = 180; j > 0; j--)
+    //     {
+    //         servos[SUB_ELBOW].write(j);
+    //         delay(30);
+    //     }
+    //     for (int j = 0; j < 180; j++)
+    //     {
+    //         servos[SUB_ELBOW].write(j);
+    //         delay(30);
+    //     }
+    // }
+
     for (int i = 0; i < 6; i++)
     {
         servos[i].write(90);
