@@ -174,11 +174,18 @@ void setup()
 
     servos[BASE_SERVO_ID].attach(BASE_SERVO_PIN, 1000, 1900);
     
-    if(arm_id == 5)
-        servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, DEFAULT_uS_LOW, 1500);
-    else
-        servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1000, 1900);
+    // if(arm_id == 5)
+    //     servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, DEFAULT_uS_LOW, 1500);
+    // else
+    //     servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1000, 1900);
 
+    // if(arm_id == 6)
+    //     servos[ELBOW_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1200, 1600);
+    // else
+    //     servos[ELBOW_SERVO_ID].attach(ELBOW_SERVO_PIN, 1000, 1900);
+
+    servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1000, 1900);
+    
     servos[ELBOW_SERVO_ID].attach(ELBOW_SERVO_PIN, 1000, 1900);
     servos[WRIST_YAW_SERVO_ID].attach(WRIST_YAW_SERVO_PIN, 1000, 1900);
     servos[WRIST_PITCH_SERVO_ID].attach(WRIST_PITCH_SERVO_PIN, 1000, 1900);
