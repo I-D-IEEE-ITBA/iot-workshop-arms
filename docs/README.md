@@ -1,6 +1,12 @@
-# workshop
+# Documentación
 
-Proyecto completa para el desarrollo del taller, vinculando las partes de harware con la conectividad WiFi-MQTT.
+Este directorio contiene la documentación del proyecto.
+
+## Contenido
+
+- Guías de uso.
+- Diagramas de arquitectura.
+- Explicaciones técnicas.
 
 ----------
 

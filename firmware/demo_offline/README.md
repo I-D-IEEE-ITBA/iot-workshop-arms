@@ -1,16 +1,18 @@
-# hw_test_offline
+# demo_offline
 
-Proyecto para verificación de funcionamiento y debuggeo del hardware de los brazos robóticos, completamente offline:
-* Servos:
-  1. BASE
-  2. BASE_JOINT
-  3. ELBOW
-  4. WRIST_YAW
-  5. WRIST_PITCH
-  6. CLAW
-* LED
-* RGB strip
+Proyecto demostrativo de las funcionalidades disponibles con secuencias bloqueantes para cada parte de hardware, completamente offline.
 
+## Características
+
+- Control de 6 servos (BASE, BASE_JOINT, ELBOW, WRIST_YAW, WRIST_PITCH, CLAW).
+- Control de un LED y una tira RGB.
+- No requiere conexión a WiFi ni MQTT.
+
+## Uso
+
+1. Compila y sube el firmware al ESP32 utilizando PlatformIO.
+2. El ESP32 ejecutará secuencias predefinidas para demostrar las capacidades del hardware.
+   
 ----------
 
 <p align="middle">    

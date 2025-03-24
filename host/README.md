@@ -1,18 +1,11 @@
-# iot-workshop-arms
+# Host
 
-Este repositorio contiene el código y los recursos necesarios para el desarrollo, mantenimiento y uso de los brazos robóticos del [Taller IoT](https://ieeeitba.org.ar/iot).
+Scripts y configuraciones para el host que controla los brazos robóticos.
 
-## Estructura del repositorio
+## Estructura
 
-- **`firmware/`**: Contiene los proyectos de firmware para los ESP32 de los brazos robóticos.
-  - `workshop/`: Versión final utilizada en el taller.
-  - `demo_offline/`: Proyecto demostrativo offline.
-  - `hw_test_offline/`: Proyecto para pruebas de hardware offline.
-  - `id_flasher/`: Proyecto para flashear IDs en los ESP32.
-- **`host/`**: Scripts y configuraciones para el host.
-  - `flows/`: Flows de referencia para Node-RED.
-  - `scripts/`: Scripts para levantar el broker MQTT y Node-RED.
-- **`docs/`**: Documentación del proyecto.
+- **`flows/`**: Flows de referencia para Node-RED.
+- **`scripts/`**: Scripts para levantar el broker MQTT y las instancias de Node-RED.
 
 ----------
 
@@ -27,3 +20,4 @@ Este repositorio contiene el código y los recursos necesarios para el desarroll
     <a href="https://www.linkedin.com/company/ieee-itba/"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" align="center" alt="LinkedIn Organization" width="20px" /></a>
     <a href="https://www.instagram.com/ieee.itba/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" align="center" alt="Instagram Profile" width="20px" /></a>
 </p>
+
