@@ -1,18 +1,12 @@
-# iot-workshop-arms
+# Flows de Node-RED
 
-Este repositorio contiene el código y los recursos necesarios para el desarrollo, mantenimiento y uso de los brazos robóticos del [Taller IoT](https://ieeeitba.org.ar/iot).
+Este directorio contiene los flows de referencia para Node-RED utilizados en el Taller IoT.
 
-## Estructura del repositorio
+## Uso
 
-- **`firmware/`**: Contiene los proyectos de firmware para los ESP32 de los brazos robóticos.
-  - `workshop/`: Versión final utilizada en el taller.
-  - `demo_offline/`: Proyecto demostrativo offline.
-  - `hw_test_offline/`: Proyecto para pruebas de hardware offline.
-  - `id_flasher/`: Proyecto para flashear IDs en los ESP32.
-- **`host/`**: Scripts y configuraciones para el host.
-  - `flows/`: Flows de referencia para Node-RED.
-  - `scripts/`: Scripts para levantar el broker MQTT y Node-RED.
-- **`docs/`**: Documentación del proyecto.
+1. Abre Node-RED en el host.
+2. Importa el archivo `flows.json` desde este directorio.
+3. Configura los nodos según sea necesario (por ejemplo, la dirección del broker MQTT).
 
 ----------
 

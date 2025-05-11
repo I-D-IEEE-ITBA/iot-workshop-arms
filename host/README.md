@@ -1,6 +1,11 @@
-# workshop
+# Host
 
-Proyecto completa para el desarrollo del taller, vinculando las partes de harware con la conectividad WiFi-MQTT.
+Scripts y configuraciones para el host que controla los brazos robóticos.
+
+## Estructura
+
+- **`flows/`**: Flows de referencia para Node-RED.
+- **`scripts/`**: Scripts para levantar el broker MQTT y las instancias de Node-RED.
 
 ----------
 
@@ -15,3 +20,4 @@ Proyecto completa para el desarrollo del taller, vinculando las partes de harwar
     <a href="https://www.linkedin.com/company/ieee-itba/"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" align="center" alt="LinkedIn Organization" width="20px" /></a>
     <a href="https://www.instagram.com/ieee.itba/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" align="center" alt="Instagram Profile" width="20px" /></a>
 </p>
+

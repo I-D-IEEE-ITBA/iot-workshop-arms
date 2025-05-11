@@ -1,18 +1,22 @@
-# iot-workshop-arms
+# workshop
 
-Este repositorio contiene el código y los recursos necesarios para el desarrollo, mantenimiento y uso de los brazos robóticos del [Taller IoT](https://ieeeitba.org.ar/iot).
+Firmware final utilizado en el Taller IoT para controlar los brazos robóticos.
 
-## Estructura del repositorio
+## Características
 
-- **`firmware/`**: Contiene los proyectos de firmware para los ESP32 de los brazos robóticos.
-  - `workshop/`: Versión final utilizada en el taller.
-  - `demo_offline/`: Proyecto demostrativo offline.
-  - `hw_test_offline/`: Proyecto para pruebas de hardware offline.
-  - `id_flasher/`: Proyecto para flashear IDs en los ESP32.
-- **`host/`**: Scripts y configuraciones para el host.
-  - `flows/`: Flows de referencia para Node-RED.
-  - `scripts/`: Scripts para levantar el broker MQTT y Node-RED.
-- **`docs/`**: Documentación del proyecto.
+- Control de 6 servos (BASE, BASE_JOINT, ELBOW, WRIST_YAW, WRIST_PITCH, CLAW).
+- Control de un LED y una tira RGB.
+- Conexión a WiFi y MQTT para recibir comandos.
+
+## Configuración
+
+1. Configura las credenciales de WiFi y MQTT en el archivo `include/secrets.h`.
+2. Compila y sube el firmware al ESP32 utilizando PlatformIO.
+
+## Uso
+
+- El ESP32 se conecta al broker MQTT y suscribe a los tópicos definidos en `secrets.h`.
+- Envía comandos MQTT para controlar los servos y los LEDs.
 
 ----------
 

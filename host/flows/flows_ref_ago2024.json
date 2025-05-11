@@ -1,0 +1,571 @@
+[
+    {
+        "id": "81037aa3856deae8",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "14695326f3dd138c",
+        "type": "ui_group",
+        "name": "Robot Arm Control",
+        "tab": "8b47086630ef9144",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false
+    },
+    {
+        "id": "8b5d4053.4c1e8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1:1883",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8b47086630ef9144",
+        "type": "ui_tab",
+        "name": "Robot Arm",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1998c635d837dc82",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ad2e6b8e07f65398",
+        "type": "ui_slider",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "Base",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 1,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "36f946995f261da7",
+                "6991560aaf0b2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "184380e6e2512f85",
+        "type": "ui_slider",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "Base Joint",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 8,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "71a5d9e34663597f",
+                "6991560aaf0b2f4c",
+                "3b18119a06556156"
+            ]
+        ]
+    },
+    {
+        "id": "b52da3bf5e0a255d",
+        "type": "ui_slider",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "Elbow",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "2641b76046ef62b1",
+                "6991560aaf0b2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "b325366844adcca7",
+        "type": "ui_slider",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "Wrist Yaw",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 9,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "08ad3327b05f9ab8",
+                "6991560aaf0b2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "d7f4975b6e2d6606",
+        "type": "ui_slider",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "Wrist Pitch",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "915bee46084fc28f",
+                "6991560aaf0b2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "729034ab2af586f2",
+        "type": "ui_slider",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "Claw",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 17,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "1eaf7e6e3f75af6b",
+                "6991560aaf0b2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "36f946995f261da7",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_base_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "71a5d9e34663597f",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_base_joint_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 470,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2641b76046ef62b1",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_elbow_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 460,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "08ad3327b05f9ab8",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_wrist_yaw_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 470,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "915bee46084fc28f",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_wrist_pitch_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 480,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1eaf7e6e3f75af6b",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_claw_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 460,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "281f728635b6f54d",
+        "type": "ui_colour_picker",
+        "z": "81037aa3856deae8",
+        "name": "RGB",
+        "label": "Choose Colour",
+        "group": "14695326f3dd138c",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": true,
+        "showValue": true,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "true",
+        "order": 11,
+        "width": 6,
+        "height": 5,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 190,
+        "y": 500,
+        "wires": [
+            [
+                "a27c746ca591f6ea",
+                "6991560aaf0b2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "a27c746ca591f6ea",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "robot_arm_rgb_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 450,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6991560aaf0b2f4c",
+        "type": "debug",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3b18119a06556156",
+        "type": "ui_gauge",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "group": "14695326f3dd138c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-180",
+        "max": "180",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 410,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5ce3f378895aca22",
+        "type": "mqtt out",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "topic": "led_state_G1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8b5d4053.4c1e8",
+        "x": 310,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e4cfc41bbcc99d96",
+        "type": "ui_switch",
+        "z": "81037aa3856deae8",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "14695326f3dd138c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "5ce3f378895aca22"
+            ]
+        ]
+    }
+]

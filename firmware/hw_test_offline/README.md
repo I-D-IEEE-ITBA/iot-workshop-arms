@@ -1,18 +1,17 @@
-# iot-workshop-arms
+# hw_test_offline
 
-Este repositorio contiene el código y los recursos necesarios para el desarrollo, mantenimiento y uso de los brazos robóticos del [Taller IoT](https://ieeeitba.org.ar/iot).
+Proyecto para pruebas de hardware de los brazos robóticos, completamente offline.
 
-## Estructura del repositorio
+## Características
 
-- **`firmware/`**: Contiene los proyectos de firmware para los ESP32 de los brazos robóticos.
-  - `workshop/`: Versión final utilizada en el taller.
-  - `demo_offline/`: Proyecto demostrativo offline.
-  - `hw_test_offline/`: Proyecto para pruebas de hardware offline.
-  - `id_flasher/`: Proyecto para flashear IDs en los ESP32.
-- **`host/`**: Scripts y configuraciones para el host.
-  - `flows/`: Flows de referencia para Node-RED.
-  - `scripts/`: Scripts para levantar el broker MQTT y Node-RED.
-- **`docs/`**: Documentación del proyecto.
+- Pruebas individuales de cada servo.
+- Pruebas de la tira RGB y el LED.
+- Secuencias predefinidas para verificar el funcionamiento del hardware.
+
+## Uso
+
+1. Compila y sube el firmware al ESP32 utilizando PlatformIO.
+2. El ESP32 ejecutará pruebas automáticas para verificar el hardware.
 
 ----------
 

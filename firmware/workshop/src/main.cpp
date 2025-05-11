@@ -34,8 +34,8 @@
  * CONSTANT AND MACRO DEFINITIONS USING #DEFINE
  ******************************************************************************/
 
-#define SMOOTH_TARGET 0.03 // multiplier for the target value on smoothing
-#define SMOOTH_PREV 0.97   // multiplier for the previous value on smoothing
+#define SMOOTH_TARGET 0.02 // multiplier for the target value on smoothing
+#define SMOOTH_PREV 0.98   // multiplier for the previous value on smoothing
 #define POS_TOLERANCE 0.5  // Tolerance for position, in degrees
 
 // Un byte de EEPROM (dirección 0x0) para guardar el N° de grupo (arm_id)
@@ -165,12 +165,31 @@ void setup()
     for (int i = 0; i < SERVOS_N; i++)
         servos[i].setPeriodHertz(50); // standard 50 hz servo
 
-    servos[BASE_SERVO_ID].attach(BASE_SERVO_PIN, 1000, 2000);
-    servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1000, 2000);
-    servos[ELBOW_SERVO_ID].attach(ELBOW_SERVO_PIN, 1000, 2000);
-    servos[WRIST_PITCH_SERVO_ID].attach(WRIST_YAW_SERVO_PIN, 1000, 2000);
-    servos[WRIST_PITCH_SERVO_ID].attach(WRIST_PITCH_SERVO_PIN, 1000, 2000);
-    servos[CLAW_SERVO_ID].attach(CLAW_SERVO_PIN, 1000, 2000);
+    // servos[BASE_SERVO_ID].attach(BASE_SERVO_PIN);
+    // servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN);
+    // servos[ELBOW_SERVO_ID].attach(ELBOW_SERVO_PIN);
+    // servos[WRIST_YAW_SERVO_ID].attach(WRIST_YAW_SERVO_PIN);
+    // servos[WRIST_PITCH_SERVO_ID].attach(WRIST_PITCH_SERVO_PIN);
+    // servos[CLAW_SERVO_ID].attach(CLAW_SERVO_PIN);
+
+    servos[BASE_SERVO_ID].attach(BASE_SERVO_PIN, 1000, 1900);
+    
+    // if(arm_id == 5)
+    //     servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, DEFAULT_uS_LOW, 1500);
+    // else
+    //     servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1000, 1900);
+
+    // if(arm_id == 6)
+    //     servos[ELBOW_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1200, 1600);
+    // else
+    //     servos[ELBOW_SERVO_ID].attach(ELBOW_SERVO_PIN, 1000, 1900);
+
+    servos[BASE_JOINT_SERVO_ID].attach(BASE_JOINT_SERVO_PIN, 1000, 1900);
+    
+    servos[ELBOW_SERVO_ID].attach(ELBOW_SERVO_PIN, 1000, 1900);
+    servos[WRIST_YAW_SERVO_ID].attach(WRIST_YAW_SERVO_PIN, 1000, 1900);
+    servos[WRIST_PITCH_SERVO_ID].attach(WRIST_PITCH_SERVO_PIN, 1000, 1900);
+    servos[CLAW_SERVO_ID].attach(CLAW_SERVO_PIN, 1000, 1900);
 
     FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
     FastLED.setBrightness(100);

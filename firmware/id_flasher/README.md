@@ -1,15 +1,12 @@
-# demo_offline
+# id_flasher
 
-Proyecto demostrativo de las funcionalidades disponibles con secuencias bloqueantes para cada parte de hardware, completamente offline:
-* Servos:
-  1. BASE
-  2. BASE_JOINT
-  3. ELBOW
-  4. WRIST_YAW
-  5. WRIST_PITCH
-  6. CLAW
-* LED
-* RGB strip
+Proyecto para flashear IDs únicos en los ESP32 de los brazos robóticos.
+
+## Uso
+
+1. Configura el ID deseado en el código fuente.
+2. Compila y sube el firmware al ESP32 utilizando PlatformIO.
+3. El ESP32 almacenará el ID en la memoria EEPROM.
 
 ----------
 
