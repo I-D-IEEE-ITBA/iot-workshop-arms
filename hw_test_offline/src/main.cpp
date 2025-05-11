@@ -85,8 +85,9 @@ void setup()
     ESP32PWM::allocateTimer(2);
     ESP32PWM::allocateTimer(3);
 
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 6; i++){
         servos[i].setPeriodHertz(50); // standard 50 hz servo
+    }
 
     servos[SUB_BASE].attach(BASE_SERVO_PIN, 1000, 2000);
     servos[SUB_BASE_JOINT].attach(BASE_JOINT_SERVO_PIN, 1000, 2000);
@@ -98,15 +99,48 @@ void setup()
     FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
     FastLED.setBrightness(100);
 
-    digitalWrite(LED_RED, HIGH);
-    cycle_color(CRGB::Red);
+    for (int i = 0; i < NUM_LEDS; i++) {
+        leds[i] = CRGB::Red;
+    }
+    FastLED.show();
 
+    digitalWrite(LED_RED, HIGH);
+    //cycle_color(CRGB::Red);
+/*
     for (int i = 0; i < 6; i++)
     {
-        servos[i].write(90);
-        delay(250);
+        servos[0].write(90);
+        delay(1500);
+        servos[0].write(180+90*i);
+        delay(1500);
     }
+*/
+//servo elbow no funciona!!!!!!!!!!!!!!!!!!!!!!
+//tira led no anda(pensamos que se quemo), pero el pin 14 anda
 
+    int i = 2;
+    servos[i].write(0);
+    delay(1000);
+
+    printf("\n\nTesteando servo: ");
+   
+    servos[i].write(45);
+    delay(1000);
+    
+    servos[i].write(90);
+    delay(1000);
+    
+    servos[i].write(135);
+    delay(1000);
+    
+    servos[i].write(180);
+    delay(1000);
+
+    servos[i].write(-180);
+    delay(1000);
+    
+
+/*
     for (int i = 0; i < 6; i++)
     {
         Serial.print("\n\nTesteando servo: ");
@@ -131,16 +165,21 @@ void setup()
 
         delay(250);
     }
+*/
+
+
 }
 
 void loop()
 {
-    digitalWrite(LED_RED, LOW);
+    
+    digitalWrite(19, LOW);
     cycle_color(CRGB::Black);
     delay(500);
-    digitalWrite(LED_RED, HIGH);
+    digitalWrite(19, HIGH);
     cycle_color(CRGB::Red);
     delay(500);
+    
 }
 
 /*******************************************************************************

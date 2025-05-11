@@ -17,7 +17,7 @@
  ******************************************************************************/
 
 #define D0  16
-#define D1  5
+#define D1  5 
 #define D2  4
 #define D3  0
 #define D4  2
@@ -26,17 +26,17 @@
 #define D7  13
 #define D8  15
 
-#define BASE_SERVO_PIN          18
-#define BASE_JOINT_SERVO_PIN    05
-#define ELBOW_SERVO_PIN         22
-#define WRIST_YAW_SERVO_PIN     21
-#define WRIST_PITCH_SERVO_PIN   23
-#define CLAW_SERVO_PIN          19
+#define BASE_SERVO_PIN          13 //funciona
+#define BASE_JOINT_SERVO_PIN    05 //funciona
+#define ELBOW_SERVO_PIN         19 //no funciona
+#define WRIST_YAW_SERVO_PIN     4 //funciona
+#define WRIST_PITCH_SERVO_PIN   15 //funciona
+#define CLAW_SERVO_PIN          12 //funciona
 
 #define NUM_LEDS  8
-#define LED_PIN   17
+#define LED_PIN   14
 
-#define LED_RED   32
+#define LED_RED   32 //funciona
 
 #define Board_LED D0
 #define External_LED D1
